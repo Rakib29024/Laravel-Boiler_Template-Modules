@@ -2,7 +2,7 @@
     "name": "vendor/auth-module",
     "description": "Authentication module for the Laravel app",
     "require": {
-        
+        "laravel/breeze": "^2.1"
     },
     "autoload": {
         "psr-4": {
