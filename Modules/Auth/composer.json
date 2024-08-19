@@ -1,0 +1,12 @@
+{
+    "name": "vendor/auth-module",
+    "description": "Authentication module for the Laravel app",
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Auth\\": ""
+        }
+    }
+}

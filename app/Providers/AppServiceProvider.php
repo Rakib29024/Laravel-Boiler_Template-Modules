@@ -11,7 +11,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $modules = config('module.modules');
+
+        foreach ($modules as $module => $enabled) {
+            if ($enabled) {
+                $moduleProvider = "\\Modules\\$module\\Providers\\{$module}ServiceProvider";
+                if (class_exists($moduleProvider)) {
+                    $this->app->register($moduleProvider);
+                }
+            }
+        }
     }
 
     /**
